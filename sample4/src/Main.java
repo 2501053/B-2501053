@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner keyboard = new Scanner(System.in);
+
+        String name = "";
+        short age = 0;
+        float height = 0.0f;
+        float weight = 0.0f;
+
+        // 입력
+        System.out.print("당신의 이름은? ");
+        name = keyboard.nextLine();
+
+        System.out.printf("%s님의 나이는? ", name);
+        age = keyboard.nextShort();
+        keyboard.nextLine(); // 버퍼 정리
+
+        System.out.printf("%s님의 키는? (cm) ", name);
+        height = keyboard.nextFloat();
+
+        System.out.printf("%s님의 몸무게는? (kg) ", name);
+        weight = keyboard.nextFloat();
+
+        // 출력
+        System.out.printf("%s 님의 나이는 %d살 입니다.\n", name, age);
+        System.out.printf("%s 님의 키는 %.1f cm 입니다.\n", name, height);
+        System.out.printf("%s 님의 몸무게는 %.1f kg 입니다.\n", name, weight);
+    }
+}
